@@ -1,0 +1,57 @@
+.no-padding {
+    padding: 0px 0px 0px 0px;
+}
+
+.no-margin {
+    margin: 0px 0px 0px 0px;
+    margin-bottom: 0rem !important;
+}
+
+.order-total-component {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.order-summary-header {
+    background-color: lightgray;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 3px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.order-details {
+
+    >ul {
+        padding-top: 7px;
+        padding-left: 3px;
+        margin-bottom: 0px;
+    }
+    
+    .shipping-warning-text {
+        font-size: 1px;
+        line-height: 1px;
+        visibility:hidden;
+    }
+
+    .shipping-details {
+
+        display: flex;
+        justify-content: space-between;
+        padding-top: 3px;
+        border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+        
+        .shipping-details-header {
+            font-size: 10px;
+            text-emphasis: muted;
+            font-weight: bold;
+        }
+        
+        .shipping-details-values {
+            font-size: 10px;
+        }
+    
+    }
+
+}

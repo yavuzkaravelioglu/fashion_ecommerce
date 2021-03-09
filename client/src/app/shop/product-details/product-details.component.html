@@ -1,0 +1,104 @@
+<div *ngIf="product" class="no-margin" style="width: 100%;">  
+
+    <div class="black-column no-margin no-padding">
+        
+    </div>
+
+    <div class="product-container d-flex no-margin" >
+        
+        <!-- ************* 1. ROW ************* -->
+
+        <div class="row no-margin">
+
+            <!-- ************* 1. ROW ************* -->
+  
+                <div class="first-col-img-a column justify-content-center">
+                    <img class="card-img" src="{{product.pictureUrl1}}" alt="{{product.name}}" > 
+                </div>
+
+                <div class="second-col-img-b column justify-content-center">
+                    <img class="card-img" src="{{product.pictureUrl2}}" alt="{{product.name}}" > 
+                </div>
+
+                <div class="second-col-img-c column justify-content-center">
+                    <img class="card-img" src="{{product.pictureUrl3}}" alt="{{product.name}}" > 
+                </div>
+
+                <div class="third-col-img-d column justify-content-center">
+                    <img class="card-img" src="{{product.pictureUrl4}}" alt="{{product.name}}" > 
+                </div>
+
+                <div class="third-col-img-e column justify-content-center">
+                    <img class="card-img" src="{{product.pictureUrl5}}" alt="{{product.name}}" > 
+                </div>
+
+                
+                <div class="product-info-col-f column no-margin" >
+                
+                    <p id="product-name-text"> {{product.name}} </p>
+                    <p id="product-type-text"> {{product.productType}} </p>
+                    
+                    <p id="product-id-text"> [Code: VN-0A4-U3B2T-A1] </p>
+
+                    <div id="material-info" class="row d-flex no-margin" style="flex-direction:column;">
+                        <p id="material-label" class="no-margin">Material</p>
+                        <p id="material-type" class="no-margin">%100 COTTON</p>
+                    </div>
+    
+                    <h3 id="product-price">{{product.price}}TL</h3>
+
+                    <p id="size-label">BEDEN</p>
+                         
+                    <div id="size-container">
+    
+                        <div class="radio">
+                            <input class="hidden" type="radio" id="radio_button_26827" name="option[2867]" value="26827">
+                            <label class="button-label" for="radio_button_26827">S</label>
+                        </div>
+                
+                        <div class="radio  radio-button-disabled ">
+                            <input class="hidden" type="radio" id="radio_button_26828" disabled="" name="option[2867]" value="26828">
+                            <label class="button-label" for="radio_button_26828">M</label>
+                        </div>
+    
+                        <div class="radio ">
+                            <input class="hidden" type="radio" id="radio_button_26829" name="option[2867]" value="26829">
+                            <label class="button-label" for="radio_button_26829">L</label>
+                        </div>
+    
+                        <div class="radio ">
+                            <input class="hidden" type="radio" id="radio_button_26830" name="option[2867]" value="26829">
+                            <label class="button-label" for="radio_button_26830">XL</label>
+                        </div>
+    
+                        <div class="radio ">
+                            <input class="hidden" type="radio" id="radio_button_26831" name="option[2867]" value="26829">
+                            <label class="button-label" for="radio_button_26831">XXL</label>
+                        </div>
+    
+                    </div>
+
+                <!--
+                    <div class="shop-cart-item-quantity">
+                        <button type="button" class="quantity-decrease">
+                            <i id="quantity-decrease-icon" class="fa fa-minus" ></i>
+                        </button>
+                        <span class="shop-cart-item__units">1</span>
+                        <button type="button" class="quantity-decrease">
+                            <i id="quantity-increase-icon" class="fa fa-plus" ></i>
+                        </button>
+                    </div>
+                -->
+    
+                    <div class="row no-margin">
+                        <div class="button-cart-div column">
+                            <button (click)="addItemToBasket()" class="btn" type="button" id="button-cart" data-loading-text="Yükleniyor...">SEPETE EKLE</button>
+                        </div>
+                    </div>
+        
+                </div>
+
+        </div>
+
+</div>
+

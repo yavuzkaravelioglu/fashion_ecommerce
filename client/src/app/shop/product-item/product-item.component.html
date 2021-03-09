@@ -1,0 +1,29 @@
+<div class="outer" style="margin: 0 auto; padding: 0px 1px 0px; max-width: 100vw; max-height:auto;">
+  
+    <div class="card">
+  
+      <div class="row">
+        <img class="card-img-top" routerLink="/shop/{{product.id}}"  src="{{product.pictureUrl}}" alt="{{product.name}}" >
+
+      </div>
+  
+      <div class="row">
+        <div class="col-9 no-padding">
+          <p  class="card-text" >{{product.price | currency}}</p>
+          <p class="card-text" id="cardText" routerLink="/shop/{{product.id}}">{{product.name}}</p>
+        </div>
+  
+        <div class="col-3 no-padding" id="heart-button-container">
+          <button (click)="addItemToBasket()" type="button" class="add-item-basket no-padding">
+            <i class="fa fa-heart"></i>
+          </button>
+        </div>
+      </div>
+    
+    </div>
+
+</div>
+
+
+
+

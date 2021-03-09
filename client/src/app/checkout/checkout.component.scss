@@ -1,0 +1,36 @@
+.basket-container {
+    width: 100%;
+}
+
+.black-column {
+    min-height: 10vh;
+    width: 100%;
+    background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .black-column {
+        min-height: 11vh;
+        background-color: black;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .black-column {
+        min-height: 13vh;
+        background-color: black;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .black-column {
+        min-height: 13vh;
+        background-color: black;
+    }
+
+}

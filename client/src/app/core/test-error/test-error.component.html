@@ -1,0 +1,20 @@
+
+<div class="black-column">  
+</div>
+
+<div class="error-container d-flex justify-content-center">
+
+    <button (click)="get500Error()" class="btn" type="button" id="button-cart" >TEST 500 ERROR</button>
+    <button (click)="get404Error()" class="btn" type="button" id="button-cart" >TEST 404 ERROR</button>
+    <button (click)="get400Error()" class="btn" type="button" id="button-cart" >TEST 400 ERROR</button>
+    <button (click)="get400ValidationError()" class="btn" type="button" id="button-cart" >TEST 400 VALID ERROR</button>
+
+</div>
+
+<div class="row mt-5 d-flex justify-content-center" *ngIf="validationErrors">
+    <ul class="text-danger">
+        <li *ngFor="let error of validationErrors">
+            {{error}}
+        </li>
+    </ul>
+</div>

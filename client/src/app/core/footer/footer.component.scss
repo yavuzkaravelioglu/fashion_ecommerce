@@ -1,0 +1,61 @@
+.bottom-page-wrap {
+    width: 100%;
+}
+
+.footer-first-row {
+    background-color: black;
+}
+
+.widget_nav_menu{
+
+    
+    margin-top: 30px;
+
+    .widget-title{
+        padding-top: 10px;
+        border-bottom: 1px dotted rgb(255, 255, 255, 0.7);
+        font-family: "Roboto Condensed",sans-serif;
+        color: rgb(255, 255, 255, 0.7);
+        font-size: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+}
+
+.menu{
+
+    margin-top: 10px;
+    padding-bottom: 20px;
+
+    .menu-item-object-page {
+
+        font-size: 7px;
+        color: rgb(255, 255, 255, 0.7);
+        line-height: 2;
+    
+    }
+
+}
+
+.footer-second-row {
+
+    border-top: 1px solid rgb(255, 255, 255, 0.3);
+    padding-top: 20px;
+    background-color: black;
+
+    #footer-copyright-brand-name {
+
+        
+        font-size: 12px;
+        line-height: 1;
+        color: rgb(255, 255, 255, 0.7);
+
+    }
+
+}
+
+
+

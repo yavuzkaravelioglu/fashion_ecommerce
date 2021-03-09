@@ -1,0 +1,27 @@
+<div class="order-total-component">
+
+    <p class="order-summary-header no-margin">
+        Order Summary
+    </p>
+    <div class="order-details">
+        <p class="shipping-warning-text no-margin">
+            Shipping cost will be added during checkout
+        </p>
+        <ul class="list-unstyled" *ngIf="(basketTotal$ | async)">
+            <li class="shipping-details">
+                <p class="shipping-details-header no-margin"> Order Subtotal </p>
+                <p class="shipping-details-values no-margin"> {{ (basketTotal$ | async).subtotal | currency: "TRY":"try "}} </p>
+            </li>
+            <li class="shipping-details">
+                <p class="shipping-details-header no-margin"> Shipping</p>
+                <p class="shipping-details-values no-margin"> {{ (basketTotal$ | async).shipping | currency: "TRY":"try "}} </p>
+            </li>
+            
+            <li class="shipping-details">
+                <p class="shipping-details-header no-margin"> Total </p>
+                <p class="shipping-details-values no-margin"> {{ (basketTotal$ | async).total | currency: "TRY":"try "}} </p>
+            </li>
+        </ul>
+    </div>
+
+</div>

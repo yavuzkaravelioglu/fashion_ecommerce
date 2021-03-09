@@ -1,0 +1,1012 @@
+.no-padding{
+    margin-right: 0px;
+    margin-left: 0px;
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+.no-padding-y {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-top: 0em;
+    padding-bottom: 0em;
+}
+
+.hidden {
+    display: none;
+}
+
+.shop-module-container {
+    width: 100%;
+}
+
+.black-column {
+    min-height: 11vh;
+    background-color: black;
+}
+
+/* ------- SEARCH BAR Baslangıc -------- */
+
+.search-bar-div {
+    margin-top: 3vh;
+    padding-right: 2%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#search-container {
+
+    height: 20px;
+    width: 15vh;
+    background-color: white;
+    margin-bottom: 10px;
+
+    #search-term {
+
+        border: none;
+        border-bottom: 1px solid rgb(207, 206, 206);        
+        width: 100%;
+        outline: none;
+        color: black;
+        font-size: 10px;
+        text-align: center;
+        font-family: IBM Plex Sans;
+    
+    }
+    
+    #search-term:focus{
+        color: black;
+    }
+    
+    #search-button {
+    
+        border: none;
+        color:black;
+        padding: 4px 6px;
+        font-size: 9px;
+        cursor: pointer;
+        background-color: white;
+    
+    }
+    
+    #search-reset-button {
+
+        background-color: white;
+        border: none;
+        color:black;
+        
+        font-size: 10px;
+        cursor: pointer;
+        
+    }
+
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- FILTER AND CHECK BOX Baslangıc -------- */
+// flex: 1; child div'in, parent div ile aynı width olması için
+
+.hey-container {
+    border: none;
+    width: calc(100vw - var(--scrollbar-width));
+}
+
+.hey-sol {
+    justify-content: flex-start;
+    height: 4vh;
+    padding-left: 1vh;
+}
+
+.hey-sag {
+    justify-content: flex-end;
+    height: 4vh;
+    padding-right: 1vh;
+}
+
+    /* ------- SOL KISIM: COLLECTİON SEÇİM FİLTRESİ -------- */
+
+    
+
+    .collection-label{
+
+        display: flex;
+        align-items: center;
+        margin-left: 0.5vh;
+        margin-right: 0.5vh;
+        font-weight: bold;
+        font-size: 8px;
+        font-family: "IBM Plex Sans";
+
+    }
+
+    #collection-filter {
+        margin-right: 5px;
+        align-items: center;
+
+        .form-check-label {
+            padding-top: 3px;
+        }
+    }
+
+    #choose-collection-radio:checked ~ span {
+        border-color: black;
+        font-weight: bold;
+    }
+
+    #choose-collection-label {
+        cursor: pointer;
+        font-size: 6px;
+        font-family: "IBM Plex Sans";
+    }
+
+    /* ------- SAG KISIM: SIRALAMA VE FİLTRE COLLAPSE BUTONU KISIMI -------- */
+
+        /* ------- SORT BAR Baslangıc -------- */
+
+        
+        .sorting-menu-container {
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 5px;
+
+        }
+
+
+        .selectpicker{
+
+            border: none;
+
+            background-color: white;
+            font-size: 9px;
+            width: 80%;
+            height: 100%;
+        }
+
+        .selectpicker:hover{
+            background-color:white;
+        }
+
+        .selectpicker>option{
+            font-size: 8px;
+            line-height: 6px;
+        }
+
+        .dropdown:focus {
+            outline: none!important;
+        }
+
+        :focus {
+            outline: none!important;
+        }
+
+        /* ------- FILTER COLLAPSE Baslangıc -------- */
+
+        
+        .filter-label{
+
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-weight: bold;
+            font-size: 10px;
+            font-family: "IBM Plex Sans";
+    
+        }
+
+        #filter-collapse-button {
+
+            font-size: 8px;
+            cursor: pointer;
+            padding: 5px;
+
+
+            background-color: white;
+            border: none;
+            color:black;
+            
+
+            &:active, &:focus { //etrafında olusan mavi borderı kaldırır
+                box-shadow: none;
+            }
+            
+        }
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- PRODUCT DISPLAY GOVDE Baslangıc -------- */
+
+
+.product-display-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding-right: 1%;
+    padding-left: 1%;
+
+    .product-display-column {
+        flex: 50%;
+    }
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- PAGINATION BAR Baslangıc -------- */
+
+.paginationBar::ng-deep .page-item .page-link {
+  
+    color: black;
+    //background-color: #f6f5f5 !important;
+    background-color: none !important;
+    font-size: 8px;
+    padding: 2px 4px 2px;
+    border-radius: 0;
+    outline: none!important;
+    font-family: "IBM Plex Sans";
+}
+
+.paginationBar::ng-deep .page-item:hover .page-link {
+   
+    color: #FFFFFF;
+    background-color: black !important;
+}
+
+.paginationBar::ng-deep .page-link:focus {
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.paginationBar::ng-deep .page-item.active .page-link {
+    
+    color: #FFFFFF;
+    background-color: black !important;
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+input[type='radio'] {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    outline: none;
+    border: 2px solid gray;
+}
+
+input[type='radio']:before {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 60%;
+    margin: 20% auto;
+    border-radius: 50%;
+}
+
+input[type="radio"]:checked:before {
+    background: black;
+
+}
+
+input[type="radio"]:checked {
+  border-color: black;
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- FARKLI BOYUTLU EKRAN AYARLARI BASLANGIC -------- */
+
+@media only screen and (min-width: 768px) {
+
+    .black-column {
+        min-height: 11vh;
+    }
+
+    /* ------- SEARCH BAR Baslangıc -------- */
+
+    .search-bar-div {
+        margin-top: 3vh;
+    }
+
+    #search-container {
+
+        height: 24px;
+        width: 16vh;
+    
+        #search-term {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        #search-button {
+            font-size: 10px;
+        }
+        
+        #search-reset-button {
+            font-size: 13px;
+        }
+    
+    }
+
+    /* ------- FILTER AND CHECK BOX Baslangıc -------- */
+    
+    .hey-sol {
+        height: 5vh;
+        padding-left: 1vh;
+    }
+    
+    .hey-sag {
+        height: 5vh;
+        padding-right: 1vh;
+    }
+    
+        /* ------- SOL KISIM: COLLECTİON SEÇİM FİLTRESİ -------- */
+    
+            .collection-label{
+
+                margin-left: 0.5vh;
+                margin-right: 0.5vh;
+                //height: 100%;
+
+                font-size: 12px;
+        
+            }
+        
+            #collection-filter {
+                margin-right: 5px;
+                align-items: center;
+        
+                .form-check-label {
+                    padding-top: 3px;
+                }
+            }
+        
+            #choose-collection-label {
+                font-size: 10px;
+            }
+
+        /* ------- SAG KISIM: SIRALAMA VE FİLTRE COLLAPSE BUTONU KISIMI -------- */
+
+            /* ------- SORT BAR Baslangıc -------- */
+
+            .sorting-menu-container {
+
+                margin-right: 1vh;
+
+            }
+
+            .dropdown {
+                padding-bottom: 5px;
+            }
+
+            .selectpicker{
+
+                font-size: 12px;
+                width: auto;
+                height: 100%;
+
+            }
+
+            .selectpicker>option{
+                font-size: 12px;
+                line-height: 10px;
+            }
+
+            /* ------- FILTER COLLAPSE Baslangıc -------- */
+   
+            .filter-label{
+                font-size: 13px;
+            }
+
+            #filter-collapse-button {
+                font-size: 10px;
+                margin-right: 2vh;              
+            }
+
+    /* ------- PRODUCT DISPLAY GOVDE Baslangıc -------- */
+
+    .product-display-row {
+        
+        padding-right: 1%;
+        padding-left: 1%;
+
+        .product-display-column {
+            flex: 50%;
+        }
+    }
+
+    /* ------- PAGINATION BAR Baslangıc -------- */
+
+    .paginationBar::ng-deep .page-item .page-link {
+    
+        font-size: 11px;
+        padding: 3px 6px 3px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .black-column {
+        min-height: 13vh;
+    }
+
+    /* ------- SEARCH BAR Baslangıc -------- */
+
+    .search-bar-div {
+        margin-top: 3vh;
+    }
+
+    #search-container {
+
+        height: 27px;
+        width: 18vh;
+    
+        #search-term {
+            width: 100%;
+            font-size: 13px;
+        }
+
+        #search-button {
+            font-size: 11px;
+        }
+        
+        #search-reset-button {
+            font-size: 15px;
+        }
+    
+    }
+
+    /* ------- FILTER AND CHECK BOX Baslangıc -------- */
+    
+    .hey-sol {
+        height: 5vh;
+        padding-left: 1vh;
+    }
+    
+    .hey-sag {
+        height: 5vh;
+        padding-right: 1vh;
+    }
+    
+        /* ------- SOL KISIM: COLLECTİON SEÇİM FİLTRESİ -------- */
+    
+            .collection-label{
+
+                margin-left: 0.5vh;
+                margin-right: 0.5vh;
+                //height: 100%;
+
+                font-size: 15px;
+        
+            }
+        
+            #collection-filter {
+                margin-right: 5px;
+                align-items: center;
+        
+                .form-check-label {
+                    padding-top: 3px;
+                }
+            }
+        
+            #choose-collection-label {
+                font-size: 13px;
+            }
+
+        /* ------- SAG KISIM: SIRALAMA VE FİLTRE COLLAPSE BUTONU KISIMI -------- */
+
+            /* ------- SORT BAR Baslangıc -------- */
+
+            .sorting-menu-container {
+
+                margin-right: 1vh;
+
+            }
+
+            .dropdown {
+                padding-bottom: 5px;
+            }
+
+            .selectpicker{
+
+                font-size: 13px;
+                width: auto;
+                height: 100%;
+
+            }
+
+            .selectpicker>option{
+                font-size: 14px;
+                line-height: 12px;
+            }
+
+            /* ------- FILTER COLLAPSE Baslangıc -------- */
+   
+            .filter-label{
+                font-size: 15px;
+            }
+
+            #filter-collapse-button {
+                font-size: 12px;
+                margin-right: 2vh;              
+            }
+
+    /* ------- PRODUCT DISPLAY GOVDE Baslangıc -------- */
+
+    .product-display-row {
+        
+        padding-right: 1%;
+        padding-left: 1%;
+
+        .product-display-column {
+            flex: 50%;
+        }
+    }
+
+    /* ------- PAGINATION BAR Baslangıc -------- */
+
+    .paginationBar::ng-deep .page-item .page-link {
+    
+        font-size: 14px;
+        padding: 5px 10px 5px;
+        margin-top: 15px;
+        margin-bottom: 23px;
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .black-column {
+        min-height: 15vh;
+    }
+
+    
+
+    /* ------- SEARCH BAR Baslangıc -------- */
+
+    .search-bar-div {
+        margin-top: 3vh;
+    }
+
+    #search-container {
+
+        height: 30px;
+        width: 20vh;
+    
+        #search-term {
+            width: 80%;
+            font-size: 15px;
+        }
+
+        #search-button {
+            font-size: 12px;
+        }
+        
+        #search-reset-button {
+            font-size: 17px;
+        }
+    
+    }
+
+    /* ------- FILTER AND CHECK BOX Baslangıc -------- */
+    
+    .hey-sol {
+        height: 6vh;
+        padding-left: 1vh;
+    }
+    
+    .hey-sag {
+        height: 6vh;
+        padding-right: 1vh;
+    }
+    
+        /* ------- SOL KISIM: COLLECTİON SEÇİM FİLTRESİ -------- */
+    
+            .collection-label{
+
+                margin-left: 0.5vh;
+                margin-right: 0.5vh;
+                //height: 100%;
+
+                font-size: 17px;
+        
+            }
+        
+            #collection-filter {
+                margin-right: 5px;
+                align-items: center;
+        
+                .form-check-label {
+                    padding-top: 3px;
+                }
+            }
+        
+            #choose-collection-label {
+                font-size: 15px;
+            }
+
+        /* ------- SAG KISIM: SIRALAMA VE FİLTRE COLLAPSE BUTONU KISIMI -------- */
+
+            /* ------- SORT BAR Baslangıc -------- */
+
+            .sorting-menu-container {
+
+                margin-right: 2vh;
+
+            }
+
+            .dropdown {
+                padding-bottom: 5px;
+            }
+
+            .selectpicker{
+
+                font-size: 15px;
+                width: auto;
+                height: 100%;
+
+            }
+
+            .selectpicker>option{
+                font-size: 16px;
+                line-height: 14px;
+            }
+
+            /* ------- FILTER COLLAPSE Baslangıc -------- */
+   
+            .filter-label{
+                font-size: 17px;
+            }
+
+            #filter-collapse-button {
+                font-size: 14px;
+                margin-right: 3vh;              
+            }
+
+    /* ------- PRODUCT DISPLAY GOVDE Baslangıc -------- */
+
+    .product-display-row {
+        
+        padding-right: 0.5%;
+        padding-left: 0.5%;
+
+        .product-display-column {
+            flex: 33%;
+        }
+    }
+
+    /* ------- PAGINATION BAR Baslangıc -------- */
+
+    .paginationBar::ng-deep .page-item .page-link {
+    
+        font-size: 16px;
+        padding: 6px 12px 6px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+    }
+
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+
+
+
+
+/*
+
+.black-column {
+    min-height: 15vh;
+    width: 100%;
+    background-color: black;
+}
+
+*/
+
+/* ------- SEARCH BAR Baslangıc -------- */
+
+/* 
+
+.search-bar-div {
+    margin-top: 7vh;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#search-container {
+
+    height: 30px;
+    background-color: white;
+    margin-bottom: 10px;
+
+    #search-term {
+
+        border: none;
+        border-bottom: 1px solid rgb(207, 206, 206);        
+        width: 80%;
+        outline: none;
+        color: black;
+        font-size: 15px;
+        text-align: center;
+        font-family: IBM Plex Sans;
+    
+    }
+    
+    #search-term:focus{
+        color: black;
+    }
+    
+    #search-button {
+    
+        border: none;
+        color:black;
+        padding: 4px 6px;
+        font-size: 12px;
+        cursor: pointer;
+        background-color: white;
+    
+    }
+    
+    #search-reset-button {
+
+        background-color: white;
+        border: none;
+        color:black;
+        
+        font-size: 17px;
+        cursor: pointer;
+        
+    }
+
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- FILTER AND CHECK BOX Baslangıc -------- */
+// flex: 1; child div'in, parent div ile aynı width olması için
+
+/*
+
+.hey-container {
+    
+    border: none;
+}
+
+.hey-sol {
+    justify-content: flex-start;
+    height: 6vh;
+}
+
+.hey-sag {
+    justify-content: flex-end;
+    height: 6vh;
+}
+
+    /* ------- SOL KISIM: COLLECTİON SEÇİM FİLTRESİ -------- */
+
+    /*
+
+    .collection-label{
+
+        display: flex;
+        align-items: center;
+
+        height: 100%;
+        margin-left: 2vh;
+        font-weight: bold;
+        font-size: 17px;
+        font-family: "IBM Plex Sans";
+
+    }
+
+    #choose-collection-radio:checked ~ span {
+        border-color: black;
+        font-weight: bold;
+    }
+
+    #choose-collection-label {
+        cursor: pointer;
+        font-size: 15px;
+        font-family: "IBM Plex Sans";
+    }
+
+    /* ------- SAG KISIM: SIRALAMA VE FİLTRE COLLAPSE BUTONU KISIMI -------- */
+
+        /* ------- SORT BAR Baslangıc -------- */
+
+        /*
+        .sorting-menu-container {
+
+            display: flex;
+            align-items: center;
+            margin-right: 2vh;
+
+        }
+
+        .dropdown {
+            padding-bottom: 5px;
+        }
+
+        .selectpicker{
+
+            border: none;
+            margin-bottom: .5vh;
+
+            background-color: white;
+            font-size: 15px;
+            width: auto;
+            height: 100%;
+        }
+
+        .selectpicker:hover{
+            background-color:white;
+        }
+
+        .selectpicker>option{
+            font-size: 16px;
+        }
+
+        .dropdown:focus {
+            outline: none!important;
+        }
+
+        :focus {
+            outline: none!important;
+        }
+
+        /* ------- FILTER COLLAPSE Baslangıc -------- */
+
+        /*
+        .filter-label{
+
+            display: flex;
+            align-items: center;
+            height: 100%;
+            font-weight: bold;
+            font-size: 17px;
+            font-family: "IBM Plex Sans";
+    
+        }
+
+        #filter-collapse-button {
+
+            font-size: 14px;
+            cursor: pointer;
+            padding: 5px;
+            margin-right: 3vh;
+
+
+            background-color: white;
+            border: none;
+            color:black;
+            
+
+            &:active, &:focus { //etrafında olusan mavi borderı kaldırır
+                box-shadow: none;
+            }
+            
+        }
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- RESULT COUNT DISPLAY DIV Baslangıc -------- */
+/*
+.display-result-count {
+
+    margin-bottom: 1vh;
+    padding-left: 5%;
+    
+
+    >strong {
+        font-size: 15px;
+        font-family: "IBM Plex Sans";
+        margin-right: 5px;
+    }
+
+    >span {
+        font-size: 13px;
+        font-family: "IBM Plex Sans";
+    }
+
+}
+*/
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- PRODUCT DISPLAY GOVDE Baslangıc -------- */
+
+/*
+.product-display-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    .product-display-column {
+        padding-left: 2px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+
+/* ------- PAGINATION BAR Baslangıc -------- */
+
+/*
+.paginationBar::ng-deep .page-item .page-link {
+  
+    color: black;
+    background-color: #f6f5f5 !important;
+    font-size: 16px;
+    outline: none!important;
+    font-family: "IBM Plex Sans";
+}
+
+.paginationBar::ng-deep .page-item:hover .page-link {
+   
+    color: #FFFFFF;
+    background-color: black !important;
+}
+
+.paginationBar::ng-deep .page-link:focus {
+    box-shadow: none !important;
+    border-color: transparent !important;
+}
+
+.paginationBar::ng-deep .page-item.active .page-link {
+    
+    color: #FFFFFF;
+    background-color: black !important;
+}
+
+
+
+
+
+
+/*
+
+#product-container {
+    
+    min-width: 100%;
+    height: auto;
+    padding: 0px 20px 0px 20px;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    
+}
+
+#collapse-button-models {
+   
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border: 1px solid black;
+    background: none;
+
+    &:active, &:focus {
+        box-shadow: none;
+    }
+
+}
+
+/* ------- VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV -------- */
+  
+  
+
+
+
+
+
+
+

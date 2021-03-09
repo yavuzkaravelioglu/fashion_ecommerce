@@ -1,0 +1,268 @@
+.no-padding {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.basket-container {
+    width: 100%;
+}
+
+.black-column {
+    min-height: 10vh;
+    width: 100%;
+    background-color: black;
+}
+
+.container {
+    margin-top: 5vh;
+}
+
+.table-header-l {
+    font-size: 10px;
+    padding: 0.3em 0em 0.3em 0.3em;
+}
+
+.table-header-r {
+    font-size: 10px;
+    padding: 0.3em 0.3em 0.3em 0em;
+}
+
+.product-info {
+    padding: 0.2em 0em 0.1em 0.3em;
+
+    >img {
+        max-height: 75px;
+    }
+
+    .product-info-text {
+        padding-left: 0.3em;
+        display: inline-block;
+
+        >p {
+            margin-bottom: 0;
+            font-size: 8px;
+        }
+
+        >span {
+            font-size: 9px;
+        }
+    }
+}
+
+.each-product-price {
+    font-size: 10px;
+}
+
+.each-product-quantity {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+
+    >button {
+        border: none;
+        background-color: transparent;
+        font-size: 7px;
+        &:active, &:focus { //resime tıklandıgında etrafında oluşan çerçeveyi kaldırır
+            outline: 0;
+        }
+    }
+}
+
+.delete-product {
+
+    display: flex;
+    align-items: center;
+
+    .fa-trash {
+        font-size: 10px;
+    }
+
+}
+
+#chekcout-button {
+    font-size: 10px;
+    margin-bottom: 7vh;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+
+    .black-column {
+        min-height: 11vh;
+        background-color: black;
+    }
+
+    .container {
+        margin-top: 7vh;
+    }
+
+    .table-header-l {
+        font-size: 13px;
+        padding: 0.5em 0em 0.5em 0.5em;
+    }
+
+    .table-header-r {
+        font-size: 13px;
+        padding: 0.5em 0.5em 0.5em 0em;
+    }
+
+    .product-info {      
+        padding: 0.2em 0em 0.2em 0.5em;
+
+        >img {
+            max-height: 90px;
+        }
+
+        .product-info-text {
+
+            padding-left: 0.5em;
+            display: inline-block;
+
+            >p {
+                font-size: 13px;
+            }
+
+            >span {
+                font-size: 13px;
+            }
+
+        }
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .black-column {
+        min-height: 13vh;
+        background-color: black;
+    }
+
+    .container {
+        margin-top: 9vh;
+    }
+
+    .table-header-l {
+        font-size: 16px;
+        padding: 0.7em 0em 0.7em 0.7em;
+    }
+
+    .table-header-r {
+        font-size: 16px;
+        padding: 0.7em 0.7em 0.7em 0em;
+    }
+
+    .product-info {
+        padding: 0.3em 0em 0.3em 0.7em;
+
+        >img {
+            max-height: 105px;
+        }
+
+        .product-info-text {
+
+            padding-left: 0.7em;
+            display: inline-block;
+
+            >p {
+                font-size: 16px;
+            }
+
+            >span {
+                font-size: 16px;
+            }
+
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .black-column {
+        min-height: 13vh;
+        background-color: black;
+    }
+
+    .container {
+        margin-top: 11vh;
+    }
+
+    .table-header-l {
+        font-size: 19px;
+        padding: 0.9em 0em 0.9em 0.9em;
+    }
+
+    .table-header-r {
+        font-size: 19px;
+        padding: 0.9em 0.9em 0.9em 0em;
+    }
+
+    .product-info {
+        padding: 0.4em 0em 0.4em 0.9em;
+        
+        >img {
+            max-height: 120px;
+        }
+
+        .product-info-text {
+
+            padding-left: 0.9em;
+            display: inline-block;
+
+            >p {
+                font-size: 18px;
+            }
+
+            >span {
+                font-size: 18px;
+            }
+
+        }
+    }
+
+}
+
+/*
+
+.basket-container {
+    width: 100%;
+}
+
+.black-column {
+    min-height: 10vh;
+    width: 100%;
+    background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .black-column {
+        min-height: 11vh;
+        background-color: black;
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .black-column {
+        min-height: 13vh;
+        background-color: black;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .black-column {
+        min-height: 13vh;
+        background-color: black;
+    }
+
+}
+
+*/

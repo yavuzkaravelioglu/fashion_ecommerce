@@ -1,0 +1,118 @@
+<div class="basket-container">
+
+    <div class="black-column">  
+    </div>
+
+    <div class="container">
+
+        <div *ngIf="(basket$ | async) === null" >
+            <p>There are no items in your basket</p>
+        </div>
+
+        <div *ngIf="(basket$ | async) as basket" class="cart-info">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 no-padding">
+                        <div class="table-responsive">
+
+                            <table class="tabel">
+                                <thead>
+                                    <tr>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="table-header-l">Product</div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="table-header-r">Price</div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="table-header-r">Quantity</div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="table-header-r">Total</div>
+                                        </th>
+                                        <th class="border-0 bg-light" scope="col">
+                                            <div class="table-header-r">-</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of basket.items">
+                                        
+                                        <th scope="row">
+                                            <div class="product-info">
+                                                <img src="{{item.pictureUrl}}" alt="{{item.productName}}" class="img-fluid">
+                                                <div class="product-info-text">
+                                                    <p class="product-name">
+                                                        <a routerLink="/shop/{{item.id}}" class="text-dark">
+                                                            {{item.productName}}
+                                                        </a>
+                                                    </p>
+                                                    <span class="text-muted font-weight-normal font-italic d-block">
+                                                        {{item.type}}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </th>
+
+                                        <td class="align-middle">
+                                            <div class="each-product-price">
+                                                {{item.price | currency: "TRY":"try "}}
+                                            </div>
+                                        </td>
+
+                                        <td class="align-middle">
+                                            <div class="each-product-quantity">
+                                                <button (click)="decrementItemQuantity(item)" type="button" class="quantity-decrease">
+                                                    <i id="quantity-decrease-icon" class="fa fa-minus" ></i>
+                                                </button>
+                                                <span class="shop-cart-item__units">
+                                                    {{item.quantity}}
+                                                </span>
+                                                <button (click)="incrementItemQuantity(item)" type="button" class="quantity-increase">
+                                                    <i id="quantity-increase-icon" class="fa fa-plus" ></i>
+                                                </button>
+                                            </div>
+                                        </td>
+
+                                        <td class="align-middle">
+                                            <div class="each-product-quantity">
+                                                {{ ((item.price *100 ) * item.quantity) / 100 | currency: "TRY":"try "}}
+                                            </div>
+                                        </td>
+
+                                        <td class="align-middle text-center">
+                                            <a class="delete-product">
+                                                <i (click)="removeBasketItem(item)" class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-8 offset-4">
+                        <app-order-totals></app-order-totals>
+                        <a routerLink="/checkout" class="btn btn-outline-primary btn-block no-padding" id="chekcout-button" >
+                            Proceed to checkout
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+

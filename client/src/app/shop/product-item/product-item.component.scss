@@ -1,0 +1,165 @@
+.no-padding {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.card {
+    
+    //max-width: 179px;
+    border: none;
+    border-radius: 0;
+    padding-bottom: 8px;
+
+    .row {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    
+    .card-img-top{
+        //max-width: 100%;
+        max-width: 640px;
+        border-radius: 0;
+        cursor: pointer;
+        object-position: center;
+    }
+
+    .card-img-top:active, .card-img-top:focus { //resime tıklandıgında etrafında oluşan çerçeveyi kaldırır
+        outline: 0;
+        border: none;
+    }
+    
+    .card-text {
+        font-size: 9px; 
+        line-height: 8px; 
+        font-family: 'Didact Gothic', sans-serif; 
+        padding-left: 2%; 
+        margin-block-start: 5px;
+        margin-block-end: 0em;
+        margin-bottom: 0rem;
+    }
+
+    #cardText{
+        color: grey; 
+        cursor: pointer;
+    }
+
+    #cardText:active, #cardText:focus { 
+        outline: 0;
+        border: none;
+    }
+
+    #heart-button-container {
+
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0.6rem;
+
+        .add-item-basket {
+
+            border: none;
+            border-radius: 0;
+            background-color: transparent ;
+            display: flex;
+            align-items: center;
+            &:active, &:focus { //resime tıklandıgında etrafında oluşan çerçeveyi kaldırır
+                outline: 0;
+            }
+            
+            .fa-heart {
+                font-size: 10px;
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+    .card {
+
+        padding-bottom: 11px;
+
+        .card-text {
+            font-size: 11px; 
+            line-height: 9px; 
+        }
+
+        #heart-button-container {
+
+            padding-right: 0.9rem;
+    
+            .add-item-basket {
+                
+                .fa-heart {
+                    font-size: 13px;
+                }
+            }
+    
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .card {
+
+        padding-bottom: 13px;
+
+        .card-text {
+            font-size: 13px; 
+            line-height: 11px; 
+        }
+
+        #heart-button-container {
+
+            padding-right: 1.2rem;
+    
+            .add-item-basket {
+                
+                .fa-heart {
+                    font-size: 16px;
+                }
+            }
+    
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .card {
+
+        padding-bottom: 15px;
+
+        .card-text {
+            font-size: 15px; 
+            line-height: 13px; 
+        }
+
+        #heart-button-container {
+
+            padding-right: 1.5rem;
+    
+            .add-item-basket {
+                
+                .fa-heart {
+                    font-size: 19px;
+                }
+            }
+    
+        }
+
+    }
+
+    .card-img-top{
+        max-width: 800px;
+    }
+
+}

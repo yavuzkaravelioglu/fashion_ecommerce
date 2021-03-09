@@ -1,0 +1,49 @@
+<div class="d-flex shadow-sm fixed-top">
+  
+    <img id="Logo" src="/assets/images/o-w.png" [routerLink]="['/']">  
+      
+    <nav id="category-link-container" class="">
+        <a class="category-link" [routerLink]="['/']" routerLinkActive="active" 
+            [routerLinkActiveOptions]="{exact:true}" >HOME</a>
+        <a class="category-link" [routerLink]="['/shop']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >SHOP</a>
+        <!-- 
+        <a class="category-link" [routerLink]="['/test-error']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact:true}" >ERROR</a>
+        -->
+        <a class="category-link" id="not-important-link" >CONTENT</a>
+    </nav>
+    
+    <div id="user-menu-container" class="d-flex">
+
+        <a routerLink="/basket" class="position-relative">
+            <i id="cart-image" class="fa fa-shopping-bag" ></i>
+            <div *ngIf="(basket$ | async) as basket" class="cart-no">{{basket.items.length}}</div>
+        </a>
+        <button class="login-button" type="button">LOGIN</button>
+
+    </div>
+
+</div>
+
+
+<script type="text/javascript">
+            
+    //**************************************************************** ---->
+    
+    // scroll visibility effect BASLANGIC
+    
+    window.addEventListener("scroll", function(){
+
+        var brandName = document.querySelector('#brandName');
+        
+        brandName.classList.toggle("black", window.scrollY > 0);
+    })
+
+        // scroll visibility effect BITIS
+    
+    //**************************************************************** ---->
+
+</script>
+
+

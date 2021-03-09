@@ -1,0 +1,197 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=IBM Plex Sans' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<div class="shop-module-container">
+
+
+
+<div class="black-column">  
+</div>
+
+<!-- SEARCH BARIN OLDUGU DIV -->
+
+<div class="search-bar-div">
+
+    <div id="search-container" class="d-flex">
+        <button (click)="onSearch()" type="submit" id="search-button">
+            <i class="fa fa-search"></i>
+        </button>
+        <input (keyup.enter)="onSearch()" type="text" autocomplete="off" id="search-term" #search placeholder="">
+        <button id="search-reset-button" (click)="onReset()"><i class="fa fa-close"></i></button>  
+    </div>
+
+    <!-- Eski Reset Buton <input type="button" (click)="onReset()" value="RESET SEARCH" id="search-reset-button" class="btn-black btn-block"> --> 
+
+</div>
+
+<!-- VVVVVVVVVVVV-----------------------VVVVVVVVVVVVVVVVVVV -->
+
+<!-- FILTRELEME SECENEKLERİNİN OLDUGU DIV -->
+
+<div class="hey-container d-flex">
+    
+
+    <!-- COLLECTION SECİMİNİN OLDUGU DIV -->
+
+    <div class="hey-sol no-padding d-flex col-7">
+
+        <div class="collection-label">
+                <span>COLLECTIONS |</span>
+        </div>
+        
+
+        <div class="form-check-inline no-padding" id="collection-filter"
+            *ngFor="let type of types"
+            [class.active]="type.id === this.typeIdSelected"
+            (click)="onTypeSelected(type.id)"     
+        >
+
+            <label id="choose-collection-label" class="form-check-label">
+                <input id="choose-collection-radio" type="radio" class="hidden radio-label" name="productType" [checked]="type.id === this.typeIdSelected" >
+                <span>{{type.name}}</span>
+            </label>
+            
+        </div>
+
+    </div>
+
+    <!-- SIRALA VE FİLTER COLLAPSE IN OLDUGU DIV -->
+
+    <div class="hey-sag no-padding d-flex col-5" >
+
+        <div class="sorting-menu-container no-padding">
+
+                <select class="selectpicker" data-width="100%" (change)="onSortSelected($event)">
+                    <option *ngFor="let sort of sortOptions" [value]="sort.value">
+                        {{sort.name}}
+                    </option>
+                </select> 
+
+        </div>
+
+        <label class="filter-label">Filters</label>
+
+        <button id="filter-collapse-button" class="btn" (click)="isCollapsed = !isCollapsed"
+            [attr.aria-expanded]="!isCollapsed" aria-controls="collapseBasic"><i class="fa fa-plus"></i></button>
+
+    </div>
+
+    
+</div>
+
+<!-- VVVVVVVVVVVV-----------------------VVVVVVVVVVVVVVVVVVV -->
+
+<!-- COLLAPSING GİZLİ FİLTRE SECENEKLERİ -->
+
+<div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
+        
+    <div class="d-flex flex-wrap flex-column checkbox-container" >
+            
+        <div class="form-check-inline" 
+        *ngFor="let brand of brands"
+        [class.active]="brand.id === this.brandIdSelected"
+        (click)="onBrandSelected(brand.id)"
+        >
+
+        <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="productBrand" [checked]="brand.id === this.brandIdSelected" >{{brand.name}}
+        </label>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="collapseBasic" [collapse]="isCollapsed" [isAnimated]="true">
+        
+    <div class="d-flex flex-wrap flex-column checkbox-container" >
+
+        <div class="form-check-inline" 
+            *ngFor="let type of types"
+            [class.active]="type.id === this.typeIdSelected"
+            (click)="onTypeSelected(type.id)"     
+        >
+
+            <label class="form-check-label small">
+                <input type="radio" class="form-check-input" name="productType" [checked]="type.id === this.typeIdSelected" >{{type.name}}
+            </label>
+            
+        </div>
+    
+    </div>
+
+</div>
+
+<div id="filter-collapse" [collapse]="isCollapsedFilter" [isAnimated]="true">
+        
+    <div class="d-flex flex-wrap flex-column checkbox-container" >
+
+        <div class="form-check-inline" 
+            *ngFor="let type of types"
+            [class.active]="type.id === this.typeIdSelected"
+            (click)="onTypeSelected(type.id)"     
+        >
+
+            <label class="form-check-label small">
+                <input type="radio" class="form-check-input" name="productType" [checked]="type.id === this.typeIdSelected" >{{type.name}}
+            </label>
+            
+        </div>
+
+        <div class="sidebar-group-item ">
+            <input type="button" (click)="onResetFilter()" value="RESET FILTER" id="resetButton" class="btn-black btn-block">
+        </div>
+    
+    </div>
+
+</div>
+
+<!-- VVVVVVVVVVVV-----------------------VVVVVVVVVVVVVVVVVVV -->
+
+<!-- KAÇ SONUÇ OLDUGUNU GÖSTEREN DIV -->
+
+<!-- 
+<div class="display-result-count"> 
+    
+        <strong> {{ this.totalProductCount }} </strong>
+        <span> results. </span>
+
+</div>
+-->
+
+<!-- VVVVVVVVVVVV-----------------------VVVVVVVVVVVVVVVVVVV -->
+
+<!-- DISPLAY PRODUCT SECTION / URUNLER BURADA SERGİLENİYOR -->
+
+    <div class="product-display-row row no-padding">
+
+        <div class="product-display-column column no-padding" *ngFor="let item of products">
+            <app-product-item [product]="item"></app-product-item>
+        </div>
+    
+    </div>
+
+<!-- VVVVVVVVVVVV-----------------------VVVVVVVVVVVVVVVVVVV -->
+
+<!-- PAGINATION BAR -->
+
+<div class="d-flex justify-content-center pt-2" *ngIf="totalProductCount > 0" >
+    <pagination 
+        [boundaryLinks]="true" 
+        previousText="&lsaquo;" 
+        nextText="&rsaquo;" 
+        firstText="&laquo;" 
+        lastText="&raquo;"
+        [maxSize]="5" 
+        [rotate]="true"
+        [totalItems]="this.totalProductCount"
+        (pageChanged)="onPageChanged($event)" 
+        [itemsPerPage]="this.pageSize" 
+        class="paginationBar"
+    > <!-- [totalItems], (pageChanged), [itemsPerPage], [maxSize], [rotate] ÖNEMLİ -->
+    </pagination>    
+</div>
+
+</div>
